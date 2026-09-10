@@ -58,14 +58,58 @@ The **When/Why** column explains **when to use** a word or **why** a translation
 2. Edit the English, Lisu, or When/Why column
 3. Commit and push your changes
 
-## Contributing
+## Editing on GitHub (No Software Required)
 
-1. Fork this repository
-2. Create a branch: `git checkout -b add-new-words`
-3. Make your changes to `default_data.csv`
-4. Commit: `git commit -m "feat: add new Lisu words"`
-5. Push: `git push origin add-new-words`
-6. Open a Pull Request
+You can edit the dictionary directly on GitHub's website — no installation needed.
+
+### Step 1: Create a GitHub Account
+
+1. Go to [https://github.com](https://github.com)
+2. Click **Sign up**
+3. Enter your email, create a password, and choose a username
+4. Verify your email address
+
+### Step 2: Sign In
+
+1. Go to [https://github.com/login](https://github.com/login)
+2. Enter your username/email and password
+3. Click **Sign in**
+
+### Step 3: Fork the Repository
+
+1. Go to [https://github.com/Gwasi/lisu-ngo-data](https://github.com/Gwasi/lisu-ngo-data)
+2. Click **Fork** (top right corner)
+3. Click **Create fork** — this creates your own copy
+
+### Step 4: Edit the CSV File
+
+1. In your forked repository, click on `default_data.csv`
+2. Click the **pencil icon** (Edit this file) in the top right
+3. Make your changes to the CSV
+4. Scroll down to the **Commit changes** section
+5. Add a short description (e.g., "Add new word: hello")
+6. Click **Commit changes**
+
+### Step 5: Submit a Pull Request (to share your changes)
+
+1. Go back to your forked repository
+2. Click **Contribute** → **Open pull request**
+3. Add a description of what you changed
+4. Click **Create pull request**
+
+Your changes will be reviewed and merged into the main dictionary.
+
+### Quick Reference: CSV Format
+
+Each line follows this format:
+```csv
+"English","Lisu","When/Why (optional)"
+```
+
+Example:
+```csv
+"hello","ꓮ ꓡꓯꓼ","usage: greeting"
+```
 
 ## Usage
 
