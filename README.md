@@ -108,7 +108,7 @@ Each line follows this format:
 
 Example:
 ```csv
-"hello","ꓮ ꓡꓯꓼ","usage: greeting"
+"hello","ꓧꓪꓸ ꓧꓪꓸ","usage: greeting"
 ```
 
 ## Usage
