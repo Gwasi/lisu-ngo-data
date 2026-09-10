@@ -1,6 +1,6 @@
 # Lisu Language Dictionary Data
 
-English-Lisu translation dictionary data for the Lisu NGO project.
+English-Lisu translation dictionary data for the Lisu Ngo project.
 
 ## Format
 
