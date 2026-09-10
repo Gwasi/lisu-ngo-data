@@ -31,7 +31,7 @@ English,Lisu, When/Why
 "(pronoun)(noun) said (subjects),"(pronoun)(noun) ꓡꓰ (subjects) ꓐꓯˍ ꓡꓳ"
 "(noun) stopped (gerund)","(noun) (gerund) ꓔꓯ ꓠ: ꓗꓷˍ ꓡꓳ"
 "(noun/pronoun) (verb) (adjective)","(noun/pronoun) (verb) (adjective) ꓡꓳ"
-"(noun / pronoun) (verb)(noun / pronoun / verb) (preposition) (noun / pronoun / verb)", "(noun / pronoun/ verb) (preposition) (noun / pronoun/ verb) ꓔꓯ  (noun / pronoun)(verb)" *** example: i saw the money on the tree ***
+"(noun / pronoun) (verb)(noun / pronoun / verb) (preposition) (noun / pronoun / verb)", "(noun / pronoun/ verb) (preposition) (noun / pronoun/ verb) ꓔꓯ  (noun / pronoun)(verb). I saw money on the tree." 
 "(object marker)","ꓔꓯ"
 "(pronoun) (verb) (gerund)","(pronoun) (gerund) ꓔꓬ ꓟ (verb)"
 "(pronoun) (verb) (name)","(pronoun) ꓡꓰ (name) ꓔꓯ (verb)ˍ ꓡꓳ"
@@ -63,11 +63,11 @@ English,Lisu, When/Why
 "(subject) saw that (object) was (adjective)","(object) ꓠꓬ (adjective) ꓟ ꓥ ꓡꓳ꓾ ꓐꓰ (subject) ꓟꓳꓻ ꓗꓷˍ ꓡꓳ"
 ".","꓿"
 "?","?"
-"is","ꓠꓬ" ***verb***
-"are","ꓠꓬ" ***verb***
-"was","ꓠꓬ" ***verb***
-"were","ꓠꓬ" ***verb***
-"am","ꓠꓬ" ***verb***
+"is","ꓠꓬ", "verb"
+"are","ꓠꓬ", "verb"
+"was","ꓠꓬ", "verb"
+"were","ꓠꓬ", "verb"
+"am","ꓠꓬ", "verb"
 "a (person)","(person) ꓕꓲꓽ ꓣꓳꓽ", "useage: she is a good person"
 "a (objects)","(object) ꓕꓲꓽ ꓟ"
 "a (animal)","(animal) ꓕꓲꓽ ꓘ."
@@ -194,8 +194,8 @@ English,Lisu, When/Why
 "bless","ꓶ; ꓥꓳ ꓙꓱ"
 "blessed","ꓶ; ꓥꓳ ꓙꓱ ꓗꓷꓳ"
 "bright","ꓠꓬꓲ ꓟꓳ ꓓꓴ" 
-"called","ꓘꓴ ꓗꓷ" *I called his phone*
-"called","ꓟꓬꓱꓺ ꓖꓶ" *He is called John*
+"called","ꓘꓴ ꓗꓷ" "I called his phone"
+"called","ꓟꓬꓱꓺ ꓖꓶ" "He is called John"
 "called, named","ꓟꓬꓱꓺ ꓖꓶ"
 "cloud","ꓟꓵ: ꓪꓴ"
 "completed doing","ꓬꓰ ꓓꓳ ꓡꓰꓳ"
@@ -446,7 +446,7 @@ English,Lisu, When/Why
 "God formed soil","ꓪꓴ-ꓢ ꓠꓬ ꓠꓱ ꓦꓱ: ꓔꓯ ꓚꓰ;ˍ ꓡꓳ"
 "from the dust of the ground","ꓟꓲ ꓠꓯ ꓗꓪ ꓟ ꓠꓱ ꓦꓱ: ꓡꓰ"
 "shell","ꓘꓳ, ꓛꓱ,"
-"cover","ꓘꓳ, ꓛꓱ, ***plastic cover***"
+"cover","ꓘꓳ, ꓛꓱ, "plastic cover"
 "nostrils","ꓠꓺ ꓘꓴꓻ"
 "nose","ꓠꓺ ꓘꓴꓻ"
 "nasal","ꓠꓺ ꓘꓴꓻ"
@@ -474,7 +474,7 @@ English,Lisu, When/Why
 "certainly","ꓚꓵ ꓚꓵ"
 "surely","ꓚꓵ ꓚꓵ"
 "it","ꓖꓳꓽ ꓟ"
-"when you eat it","ꓖꓳꓽ ꓟ ꓔꓯ ꓜꓽˍ ꓠꓬ" *** note: [when you] and [if you] are not the same ***
+"when you eat it","ꓖꓳꓽ ꓟ ꓔꓯ ꓜꓽˍ ꓠꓬ", "note: [when you] and [if you] are not the same"
 "if","ꓐꓭ ꓠꓬ꓾"
 "if (noun / pronoun) (verb)","(noun / pronoun) (verb) ꓐꓭ ꓠꓬ꓾"
 "if you eat it", "ꓠꓴ ꓖꓳꓽ ꓟ ꓔꓯ ꓜꓽ ꓗꓷ ꓐꓭ ꓠꓬ꓾"
