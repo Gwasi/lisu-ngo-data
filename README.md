@@ -17,7 +17,7 @@ The dictionary is stored as a CSV file with 3 columns:
 ### Basic Entry (no usage notes)
 
 ```csv
-hello,ꓮ ꓡꓯꓼ
+"hello","ꓧꓪꓸ ꓧꓪꓸ"ꓼ
 ```
 
 ### Entry with Usage Notes (When/Why)
@@ -31,8 +31,8 @@ The **When/Why** column explains **when to use** a word or **why** a translation
 ### Examples of When/Why Notes
 
 ```csv
-"called","ꓘꓴ ꓗꓷ" "*I called his phone*"
-"called","ꓟꓬꓱꓺ ꓖꓶ" "*He is called John*"
+"called","ꓘꓴ ꓗꓷ" "I called his phone, I called him"
+"called","ꓟꓬꓱꓺ ꓖꓶ" "He is called John"
 "a (fruit)","(fruit) ꓕꓲꓽ ꓢꓶ", "uses for round objects, eggs and fruits"
 "with","ꓐꓰ", "usage: 'with' acts as 'together', do something together"
 ```
@@ -43,7 +43,7 @@ The **When/Why** column explains **when to use** a word or **why** a translation
 2. **When/Why is optional** — leave it empty if no special context is needed
 3. **Be concise** — keep usage notes short and clear
 4. **Use parentheses** for variables: `(noun)`, `(verb)`, `(pronoun)`
-5. **Use asterisks** for examples: `*I called his phone*`
+5. **Use asterisks** for examples: `I called his phone`
 
 ### Adding a New Entry
 
