@@ -17,7 +17,7 @@ The dictionary is stored as a CSV file with 3 columns:
 ### Basic Entry (no usage notes)
 
 ```csv
-"hello","ꓧꓪꓸ ꓧꓪꓸ"ꓼ
+"hello","ꓧꓪꓸ ꓧꓪꓸ"
 ```
 
 ### Entry with Usage Notes (When/Why)
