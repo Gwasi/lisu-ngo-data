@@ -325,8 +325,11 @@ English,Lisu, When/Why
 "light","ꓠꓬꓲ ꓟꓳ ꓓꓴ"
 "living creatures","ꓢꓯ; ꓟꓬ ꓙꓳˍ ꓡꓳ ꓫꓵ:"
 "my","ꓥꓪ ꓔꓯꓸ"
-"my name is","ꓥꓪ ꓟꓬꓱ ꓠꓬ"
-"my name is (Proper Noun)","ꓥꓪ ꓟꓬꓱ ꓠꓬ (Proper Noun) ꓥ ꓡꓳ꓿"," if user says 'my name is (Jhon)', translate to 'ꓥꓪ ꓟꓬꓱ ꓠꓬ (Jhon) ꓥ ꓡꓳ꓿'"
+"my name is (name)","ꓥꓪ ꓟꓬꓱ ꓠꓬ (name) ꓥ ꓡꓳ꓿","usage: Introducing one's name. Preserves the person's name as-is without literal parentheses. Example: 'my name is John Wood' translates to 'ꓥꓪ ꓟꓬꓱ ꓠꓬ John Wood ꓥ ꓡꓳ꓿'"
+"hello, my name is (name)","ꓧꓪꓸ ꓧꓪꓸ꓾ ꓥꓪ ꓟꓬꓱ ꓠꓬ (name) ꓥ ꓡꓳ꓿","usage: Greeting followed by self-introduction. Example: 'Hello, my name is Alex' translates to 'ꓧꓪꓸ ꓧꓪꓸ꓾ ꓥꓪ ꓟꓬꓱ ꓠꓬ Alex ꓥ ꓡꓳ꓿'"
+"hi, my name is (name)","ꓧꓪꓸ ꓧꓪꓸ꓾ ꓥꓪ ꓟꓬꓱ ꓠꓬ (name) ꓥ ꓡꓳ꓿","usage: Informal greeting followed by self-introduction. Example: 'Hi, my name is Alex' translates to 'ꓧꓪꓸ ꓧꓪꓸ꓾ ꓥꓪ ꓟꓬꓱ ꓠꓬ Alex ꓥ ꓡꓳ꓿'"
+"my name is","ꓥꓪ ꓟꓬꓱ ꓠꓬ","Incomplete phrase; when followed by a name use 'my name is (name)' -> 'ꓥꓪ ꓟꓬꓱ ꓠꓬ (name) ꓥ ꓡꓳ꓿'"
+"my name's (name)","ꓥꓪ ꓟꓬꓱ ꓠꓬ (name) ꓥ ꓡꓳ꓿","Contraction of my name is"
 "made the day holy","ꓦꓬ; ꓠꓬꓲ ꓖꓳ ꓕꓲ ꓠꓬꓲ ꓔꓯ ꓢꓲ ꓫꓬ ꓡꓰ ꓝꓲˍ ꓡꓳ="
 "make","ꓬꓰˍ"
 "male","ꓞꓳ ꓑ ꓤ"
@@ -658,4 +661,3 @@ English,Lisu, When/Why
 "welcome","ꓡ ꓟ ꓔꓯ ꓧꓳꓽ ꓡꓳ","usage: greeting welcome"
 "friend","ꓛꓳ ꓒꓯꓹ","usage: friend"
 "my friend","ꓥꓪ ꓛꓳ ꓒꓯꓹ","usage: noun phrase"
-
