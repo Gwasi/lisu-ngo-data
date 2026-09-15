@@ -14,6 +14,7 @@
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             background: #f5f5f5;
             padding: 20px;
+            padding-bottom: 100px;
         }
         .container {
             max-width: 1400px;
@@ -24,7 +25,7 @@
             overflow: hidden;
         }
         .header {
-            background: #2563eb;
+            background: linear-gradient(135deg, #2563eb, #1e40af);
             color: white;
             padding: 20px;
         }
@@ -36,58 +37,23 @@
             opacity: 0.9;
             font-size: 0.9rem;
         }
-        .toolbar {
+        .search-bar {
             padding: 15px 20px;
             background: #f8fafc;
             border-bottom: 1px solid #e2e8f0;
-            display: flex;
-            gap: 10px;
-            flex-wrap: wrap;
-        }
-        .toolbar button {
-            padding: 8px 16px;
-            border: none;
-            border-radius: 6px;
-            cursor: pointer;
-            font-size: 0.9rem;
-            font-weight: 500;
-            transition: all 0.2s;
-        }
-        .btn-primary {
-            background: #2563eb;
-            color: white;
-        }
-        .btn-primary:hover {
-            background: #1d4ed8;
-        }
-        .btn-success {
-            background: #16a34a;
-            color: white;
-        }
-        .btn-success:hover {
-            background: #15803d;
-        }
-        .btn-danger {
-            background: #dc2626;
-            color: white;
-        }
-        .btn-danger:hover {
-            background: #b91c1c;
-        }
-        .btn-secondary {
-            background: #64748b;
-            color: white;
-        }
-        .btn-secondary:hover {
-            background: #475569;
         }
         .search-box {
-            padding: 8px 12px;
+            width: 100%;
+            padding: 10px 15px;
             border: 1px solid #e2e8f0;
-            border-radius: 6px;
-            font-size: 0.9rem;
-            flex: 1;
-            min-width: 200px;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+        .search-box:focus {
+            border-color: #2563eb;
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
         }
         .stats {
             padding: 10px 20px;
@@ -98,7 +64,7 @@
         }
         .table-wrapper {
             overflow-x: auto;
-            max-height: calc(100vh - 280px);
+            max-height: calc(100vh - 250px);
             overflow-y: auto;
         }
         table {
@@ -121,9 +87,6 @@
         }
         tr:hover {
             background: #f8fafc;
-        }
-        tr.selected {
-            background: #dbeafe;
         }
         td[contenteditable="true"] {
             cursor: text;
@@ -201,17 +164,33 @@
             justify-content: flex-end;
             margin-top: 15px;
         }
+        .modal-actions button {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+        .btn-cancel {
+            background: #64748b;
+            color: white;
+        }
+        .btn-add {
+            background: #16a34a;
+            color: white;
+        }
         .toast {
             position: fixed;
-            bottom: 20px;
+            bottom: 100px;
             right: 20px;
             background: #16a34a;
             color: white;
             padding: 12px 20px;
-            border-radius: 6px;
+            border-radius: 8px;
             font-size: 0.9rem;
             display: none;
             z-index: 200;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
         }
         .toast.show {
             display: block;
@@ -227,6 +206,68 @@
         .empty-state h2 {
             margin-bottom: 10px;
         }
+
+        /* Floating Dock Styles */
+        .floating-dock {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(20px);
+            border-radius: 20px;
+            padding: 12px 20px;
+            display: flex;
+            gap: 8px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+            cursor: grab;
+            user-select: none;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .floating-dock:active {
+            cursor: grabbing;
+        }
+        .dock-btn {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 6px;
+            padding: 12px 16px;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.2s;
+            background: transparent;
+            min-width: 70px;
+        }
+        .dock-btn:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-4px);
+        }
+        .dock-btn:active {
+            transform: translateY(-2px);
+        }
+        .dock-btn .icon {
+            width: 24px;
+            height: 24px;
+            fill: white;
+        }
+        .dock-btn .label {
+            font-size: 0.65rem;
+            color: rgba(255, 255, 255, 0.8);
+            white-space: nowrap;
+        }
+        .dock-btn.open .icon { fill: #60a5fa; }
+        .dock-btn.save .icon { fill: #34d399; }
+        .dock-btn.add .icon { fill: #a78bfa; }
+        .dock-btn.delete .icon { fill: #f87171; }
+        .dock-btn.undo .icon { fill: #fbbf24; }
+        .dock-divider {
+            width: 1px;
+            background: rgba(255, 255, 255, 0.2);
+            margin: 8px 4px;
+        }
     </style>
 </head>
 <body>
@@ -236,14 +277,8 @@
             <p>Edit your CSV files easily - Add, modify, and delete entries</p>
         </div>
         
-        <div class="toolbar">
-            <button class="btn-primary" onclick="openFile()">Open CSV</button>
-            <button class="btn-success" onclick="saveFile()">Save CSV</button>
-            <button class="btn-primary" onclick="addNewRow()">Add Row</button>
-            <button class="btn-danger" onclick="deleteSelected()">Delete Selected</button>
-            <button class="btn-secondary" onclick="undoAction()">Undo</button>
+        <div class="search-bar">
             <input type="text" class="search-box" placeholder="Search entries..." oninput="searchTable(this.value)">
-            <input type="file" id="fileInput" accept=".csv" onchange="handleFile(event)">
         </div>
         
         <div class="stats" id="stats">No file loaded</div>
@@ -265,12 +300,40 @@
             </table>
             <div class="empty-state" id="emptyState">
                 <h2>No file loaded</h2>
-                <p>Click "Open CSV" to load your dictionary file</p>
+                <p>Use the dock below to open your dictionary file</p>
             </div>
         </div>
     </div>
     
     <div class="toast" id="toast"></div>
+    
+    <!-- Floating Dock -->
+    <div class="floating-dock" id="floatingDock">
+        <button class="dock-btn open" onclick="openFile()" title="Open CSV">
+            <svg class="icon" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm-1 2l5 5h-5V4zM6 20V4h7v5h5v11H6zm2-7h8v2H8v-2zm0 4h5v2H8v-2z"/></svg>
+            <span class="label">Open</span>
+        </button>
+        <div class="dock-divider"></div>
+        <button class="dock-btn save" onclick="saveFile()" title="Save CSV">
+            <svg class="icon" viewBox="0 0 24 24"><path d="M17 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V7l-4-4zm-5 16a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm3-10H5V5h10v4z"/></svg>
+            <span class="label">Save</span>
+        </button>
+        <div class="dock-divider"></div>
+        <button class="dock-btn add" onclick="addNewRow()" title="Add Row">
+            <svg class="icon" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/></svg>
+            <span class="label">Add</span>
+        </button>
+        <div class="dock-divider"></div>
+        <button class="dock-btn delete" onclick="deleteSelected()" title="Delete Selected">
+            <svg class="icon" viewBox="0 0 24 24"><path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"/></svg>
+            <span class="label">Delete</span>
+        </button>
+        <div class="dock-divider"></div>
+        <button class="dock-btn undo" onclick="undoAction()" title="Undo (Ctrl+Z)">
+            <svg class="icon" viewBox="0 0 24 24"><path d="M12.5 8c-2.65 0-5.05.99-6.9 2.6L2 7v9h9l-3.62-3.62c1.39-1.16 3.16-1.88 5.12-1.88 3.54 0 6.55 2.31 7.6 5.5l2.37-.78C21.08 11.03 17.15 8 12.5 8z"/></svg>
+            <span class="label">Undo</span>
+        </button>
+    </div>
     
     <div class="modal" id="addRowModal">
         <div class="modal-content">
@@ -279,17 +342,48 @@
             <input type="text" id="newLisu" placeholder="Lisu translation">
             <textarea id="newWhenWhy" placeholder="When/Why (optional)"></textarea>
             <div class="modal-actions">
-                <button class="btn-secondary" onclick="closeModal()">Cancel</button>
-                <button class="btn-success" onclick="confirmAddRow()">Add Entry</button>
+                <button class="btn-cancel" onclick="closeModal()">Cancel</button>
+                <button class="btn-add" onclick="confirmAddRow()">Add Entry</button>
             </div>
         </div>
     </div>
+
+    <input type="file" id="fileInput" accept=".csv" onchange="handleFile(event)">
 
     <script>
         let csvData = [];
         let headers = [];
         let undoStack = [];
         let fileName = 'default_data.csv';
+
+        // Draggable dock
+        const dock = document.getElementById('floatingDock');
+        let isDragging = false;
+        let offsetX, offsetY;
+
+        dock.addEventListener('mousedown', (e) => {
+            if (e.target.closest('.dock-btn')) return;
+            isDragging = true;
+            offsetX = e.clientX - dock.getBoundingClientRect().left;
+            offsetY = e.clientY - dock.getBoundingClientRect().top;
+            dock.style.transition = 'none';
+        });
+
+        document.addEventListener('mousemove', (e) => {
+            if (!isDragging) return;
+            let x = e.clientX - offsetX;
+            let y = e.clientY - offsetY;
+            x = Math.max(0, Math.min(window.innerWidth - dock.offsetWidth, x));
+            y = Math.max(0, Math.min(window.innerHeight - dock.offsetHeight, y));
+            dock.style.left = x + 'px';
+            dock.style.top = y + 'px';
+            dock.style.bottom = 'auto';
+            dock.style.transform = 'none';
+        });
+
+        document.addEventListener('mouseup', () => {
+            isDragging = false;
+        });
 
         function openFile() {
             document.getElementById('fileInput').click();
@@ -333,7 +427,6 @@
                 headers = ['English', 'Lisu', 'When/Why'];
             }
             
-            let isHeaderSection = true;
             while (i < lines.length) {
                 const line = lines[i].trim();
                 i++;
