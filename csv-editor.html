@@ -213,17 +213,18 @@
             bottom: 30px;
             left: 50%;
             transform: translateX(-50%);
-            background: rgba(15, 23, 42, 0.95);
+            background: rgba(255, 255, 255, 0.15);
             backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
             border-radius: 20px;
             padding: 12px 20px;
             display: flex;
             gap: 8px;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
             z-index: 1000;
             cursor: grab;
             user-select: none;
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.3);
         }
         .floating-dock:active {
             cursor: grabbing;
@@ -242,7 +243,7 @@
             min-width: 70px;
         }
         .dock-btn:hover {
-            background: rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.4);
             transform: translateY(-4px);
         }
         .dock-btn:active {
@@ -255,17 +256,18 @@
         }
         .dock-btn .label {
             font-size: 0.65rem;
-            color: rgba(255, 255, 255, 0.8);
+            color: rgba(50, 50, 50, 0.9);
             white-space: nowrap;
+            font-weight: 500;
         }
-        .dock-btn.open .icon { fill: #60a5fa; }
-        .dock-btn.save .icon { fill: #34d399; }
-        .dock-btn.add .icon { fill: #a78bfa; }
-        .dock-btn.delete .icon { fill: #f87171; }
-        .dock-btn.undo .icon { fill: #fbbf24; }
+        .dock-btn.open .icon { fill: #2563eb; }
+        .dock-btn.save .icon { fill: #16a34a; }
+        .dock-btn.add .icon { fill: #7c3aed; }
+        .dock-btn.delete .icon { fill: #dc2626; }
+        .dock-btn.undo .icon { fill: #d97706; }
         .dock-divider {
             width: 1px;
-            background: rgba(255, 255, 255, 0.2);
+            background: rgba(0, 0, 0, 0.15);
             margin: 8px 4px;
         }
     </style>
