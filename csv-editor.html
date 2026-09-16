@@ -208,19 +208,19 @@
         }
 
         /* Floating Dock Styles */
-        .floating-dock {
+.floating-dock {
             position: fixed;
             bottom: 30px;
             left: 50%;
             transform: translateX(-50%);
-            background: rgba(255, 255, 255, 0.15);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
+            background: rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
             border-radius: 20px;
-            padding: 12px 20px;
+            padding: 10px 16px;
             display: flex;
-            gap: 8px;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+            gap: 6px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
             z-index: 1000;
             cursor: grab;
             user-select: none;
@@ -256,7 +256,7 @@
         }
         .dock-btn .label {
             font-size: 0.65rem;
-            color: rgba(50, 50, 50, 0.9);
+            color: rgba(30, 40, 50, 0.9);
             white-space: nowrap;
             font-weight: 500;
         }
@@ -267,8 +267,8 @@
         .dock-btn.undo .icon { fill: #d97706; }
         .dock-divider {
             width: 1px;
-            background: rgba(0, 0, 0, 0.15);
-            margin: 8px 4px;
+            background: rgba(255, 255, 255, 0.3);
+            margin: 6px 3px;
         }
     </style>
 </head>
